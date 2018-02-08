@@ -8,13 +8,8 @@ use bunq\Model\Generated\Endpoint\User;
 
 require_once 'vendor/autoload.php';
 
-/*
- * Very first index in an array.
- */
 const INDEX_FIRST = 0;
-/*
- * Size of each page of payments listing.
- */
+
 const PAGE_SIZE = 4;
 
 $apiContext = ApiContext::restore(ApiContext::FILENAME_CONFIG_DEFAULT);
