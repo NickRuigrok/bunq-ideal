@@ -24,14 +24,6 @@ $paymentDescription = 'order_id: ' . (time() * 1000) . ";\n product_id: $product
 const FILENAME_BUNQ_CONFIG = 'bunq.conf';
 const INDEX_FIRST = 0;
 
-/*
-const deviceServerDescription = 'bunq-ideal';
-const permitted_ips = [];
-$apiKey = 'b4f3206b6de53e905829f0d14ef41c7a984a010a4452f9719af0a1a7ed3d960a';
-$apiContext = ApiContext::create(BunqEnumApiEnvironmentType::PRODUCTION(), $apiKey, deviceServerDescription, permitted_ips);
-$database->setBunqContext($apiContext->toJson());
-*/
-
 $apiContext = ApiContext::restore(FILENAME_BUNQ_CONFIG);
 $database->setBunqContext($apiContext->toJson());
 
